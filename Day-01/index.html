@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script>
+        class Car{
+            constructor(name){
+                this.car = name;
+            }
+
+            methodadd(){
+                return 'I have a ' + this.car;
+            }
+        }
+
+        class Model extends Car{
+            constructor(name,brand){
+                super(name);
+                this.carbrand = brand;
+            }
+
+            methodsecond(){
+                return this.methodadd() + ', I have model of ' + this.carbrand;
+            }
+        }
+
+        const newCar = new Car('Ford','Mustang');
+        document.write(newCar.methodsecond());
+    </script>
+</body>
+</html>
