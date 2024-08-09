@@ -1,17 +1,23 @@
-const obj = {
-  obj1: {
-    id: 1,
-    hello: "World",
-  },
-  obj2: {
-    id: 2,
-    hello: "World",
-  },
-  obj3: {
-    id: 4,
-    hello: "World",
-  },
-};
+class Car{
+    constructor(name){
+        this.brand = name;
+    }
 
-const mylist = Object.values(obj).map(x => x.id);
-console.log(mylist);
+    method1(){
+        return "I have a " + this.brand;
+    }
+}
+
+class name extends Car{
+    constructor(name,model){
+        super(name);
+        this.mod = model;
+    }
+
+    method2(){
+        return this.method1() + " i have model " + this.mod;
+    }
+}
+
+const car1 = new Car("Ford","Mustang");
+method2.car1();
